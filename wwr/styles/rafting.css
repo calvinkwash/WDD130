@@ -15,7 +15,7 @@
 
 body {
   font-family: var(--body-font);
-  color: var(--accent1-color);
+  color: var(--primary-color);
   background-color: var(--secondary-color);
 }
 
@@ -24,10 +24,12 @@ header, main, footer {
   margin: 0 auto;
 }
 
+/* Header with Grid Layout */
 header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
+  gap: 20px;
   background-color: var(--primary-color);
   color: var(--accent2-color);
   padding: 10px 30px;
@@ -35,6 +37,19 @@ header {
 
 header .logo {
   width: 100px;
+}
+
+/* Flex Navigation */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: var(--accent2-color);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 h1, h2 {
@@ -47,6 +62,7 @@ nav, p, section, article {
   padding: 8px;
 }
 
+/* Hero Section */
 .hero {
   position: relative;
   margin-bottom: 30px;
@@ -62,11 +78,11 @@ nav, p, section, article {
   position: absolute;
   top: 20px;
   width: 100%;
-  padding: 16px;
   text-align: center;
-  opacity: 0.8;
+  padding: 16px;
   background-color: var(--accent1-color);
-  color: #fff;
+  color: white;
+  opacity: 0.8;
 }
 
 .hero article {
@@ -86,19 +102,38 @@ nav, p, section, article {
   border-radius: 8px;
 }
 
-.gallery {
+/* History Section */
+.history-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* Adventures Gallery */
+.adventures .gallery {
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 16px;
+  gap: 10px;
+}
+
+.gallery figure {
+  width: 18%;
+  text-align: center;
 }
 
 .gallery img {
-  width: 18%;
+  width: 100%;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.gallery figcaption {
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: var(--primary-color);
+}
+
+/* Footer */
 footer {
   background-color: var(--primary-color);
   color: var(--accent2-color);
@@ -112,6 +147,7 @@ footer {
 footer nav.socialmedia {
   display: flex;
   gap: 15px;
+  margin-left: auto;
 }
 
 footer nav.socialmedia a {
