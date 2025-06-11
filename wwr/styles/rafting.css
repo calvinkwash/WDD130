@@ -217,3 +217,27 @@ footer nav.socialmedia img {
 .contact-form button:hover {
   background-color: var(--primary-color);
 }
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table.bordered {
+  width: 100%;
+  border-collapse: collapse; /* Prevent double borders */
+  border: 2px solid #333;     /* Outer border */
+}
+
+table.bordered th,
+table.bordered td {
+  border: 1px solid #666;     /* Inner cell borders */
+  padding: 0.5rem 1rem;
+}
+
+table.bordered thead th {
+  background: #f5f5f5;
+}
+
+table.bordered tbody tr:nth-child(even) {
+  background: #fafafa;
+}
